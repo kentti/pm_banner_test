@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="description" content="Webpage description goes here" />
+	<meta charset="utf-8">
+	<title>Change_me</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		html, body {
+			padding: 0;
+			margin: 0;
+		}
+		img {
+			border: none;
+		}
+		#anim {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+	</style>
+	<script>
+		function getQueryStringValue (key) {
+			return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
+		}
+		window.clickTAG = getQueryStringValue("clickTAG");
+	</script>
+</head>
+
+<body onclick="window.open(window.clickTAG); return false;">
+<div id="anim" class="container"></div>
+
+<script src="./lottie.js"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
